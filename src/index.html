@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,19 +11,22 @@
   <header >
     <nav id="navegacion">
       <div class="logo-div"><img src="img/logo.png" alt="logo" class="logo-img"></div>
-      <button>Log In</button>
+      <button>Login</button>
       </nav>
   </header>
   <main>
     <section id="Home" class="mostrar">
       <div id="principal">
-        <img src="img/principal4.gif" alt="totoro">
+        <img class="principal" src="./img/principal.jpg" alt="banner">
 
       </div>        
 
       <div id="contenedorImagenes">
-        <figure id="filmsEnlace" class="tarjeta">
-          <img src="img/tarjeta.jpg" alt="films">
+        <figure id="filmsEnlace" >
+          <a href="./films.html" class="tarjeta">
+            <img src="img/tarjeta.jpg" alt="films">
+          </a>
+          
           <figcaption> Films </figcaption>
         </figure>
         <figure class="tarjeta">
@@ -49,5 +52,9 @@
       </div>
         <hr>
     </footer>
+
+    <script type="module" src="./main.js">
+    </script>
+
 </body>
 </html>
