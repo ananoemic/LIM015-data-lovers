@@ -13,11 +13,16 @@ const filmsdata = data["films"];
     let auxPelicula = `<div class="films"> 
         <img src= "${pelicula['poster']}">
             <div>
-            //h3= etiqueta de html cabecera que anida subsecciones
+    
             <h3>"${pelicula['title']}"</h3> 
             <p> 
             "${pelicula['description']}"
             </p>
+            <p> Director: "${pelicula['director']}"
+            </p>
+            <p> Producer: "${pelicula['producer']}"
+            </p>
+            
             </div>
     </div>`;
 
