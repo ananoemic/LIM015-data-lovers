@@ -4,57 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Ghibli icon" href="img/favicon.ico">
     <link rel="stylesheet" href="./style.css">
     <title>Studio Ghibli</title>
 </head>
 <body>
-  <header >
-    <nav id="navegacion">
-      <div class="logo-div"><img src="img/logo.png" alt="logo" class="logo-img"></div>
-      <button>Login</button>
-      </nav>
-  </header>
-  <main>
-    <section id="Home" class="mostrar">
-      <div id="principal">
-        <img class="principal" src="./img/principal.jpg" alt="banner">
-
-      </div>        
-
-      <div id="contenedorImagenes">
-        <figure id="filmsEnlace" >
-          <a href="./films.html" class="tarjeta">
-            <img src="img/tarjeta.jpg" alt="films">
-          </a>
-          
-          <figcaption> Films </figcaption>
-        </figure>
-        <figure class="tarjeta">
-          <img src="img/tarjeta.jpg" alt="staff">
-          <figcaption>Staff</figcaption>
-        </figure>
-        <figure class="tarjeta">
-          <img src="img/tarjeta.jpg" alt="aboutUs">
-          <figcaption>About Us</figcaption>
-        </figure> 
-      </div>
-    </section>
-  </main>  
-    <footer>
-      <hr>
-      <div id="footer"> 
-        <nav id="menu">
+  <header class="header" >
+    <div class="container logo-nav-container">
+      <img src="img/logo.png" alt="logo" class="logo-img">
+      <nav class="navigation">
+        <ul>
           <li><a href="#">Home</a></li>
-			    <li><a href="#">Staff</a></li>
-		    	<li><a href="#">Films</a></li>
-		    	<li><a href="#">About</a></li>
-          </nav>
-      </div>
-        <hr>
-    </footer>
+          <li><a href="#">Staff</a></li>
+          <li><a href="#">Films</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    <script type="module" src="./main.js">
-    </script>
+    <div id="menu" class="menu">
+      
+    </div>
+  </header>
+  <main class="container main">
+    <!-- agrego slider -->
+    <div class="slider">
+    <ul>
+      <li><img src="slider/1.png" alt=""></li>
+      <li><img src="slider/2.jpg" alt=""></li>
+      <li><img src="slider/3.jpg" alt=""></li>
+      <li><img src="slider/4.jpg" alt=""></li>
+      <li><img src="slider/5.jpg" alt=""></li>
+      <li><img src="slider/6.jpg" alt=""></li>
+    </ul>
+    </div>
 
+    <div id="categories" class="flexContainer">
+    <div id="contenedorImagenes" class="flexContainer" >      
+      <figure id="filmsEnlace" >
+        <a href="./films.html" class="flexItem">
+          <img src="img/tarjeta.jpg" alt="films">
+        </a>
+        <figcaption> Films </figcaption>
+      </figure>
+
+      <figure id="staffEnlace">
+        <a href="./staff.html" class="flexItem">
+          <img src="img/tarjeta.jpg" alt="staff">
+        </a>
+        <figcaption> Staff </figcaption>
+      </figure>
+
+      <figure id="aboutUsEnlace">
+        <a href="./aboutUs.html" class="flexItem">
+          <img src="img/tarjeta.jpg" alt="aboutUs">
+        </a>
+        <figcaption>About Us</figcaption>
+      </figure> 
+    </div>
+    </div>
+
+    <div id="films2" class="flexContainer">
+    <form>
+    <label for="filterFilms"> filtrar por:</label>
+    <select name="filterFilms" id="filterFilms">
+      <option value="value1"selected>Movies and Series</option>
+      <option value="value2" >Personajes</option>
+      <option value="value3">Locaciones</option>
+      <option value="value3">Vehículos</option>
+    </select>
+
+    <label for="orderFor"> ordenar por:</label>
+    <select name="orderFor" id="orderFor">
+      <option value="value1"selected>A-Z</option>
+      <option value="value2" >Z-A</option>
+      <option value="value3">Release Old</option>
+      <option value="value3">Release Young</option>
+    </select>
+    
+    </form>
+    </div>
+
+    <div id="staff" class="flexContainer">
+      <form>
+      <label for="filterFilms"> filtrar por:</label>
+      <select name="filterFilms" id="filterFilms">
+        <option value="value1"selected>Directores</option>
+        <option value="value2" >Productores</option>
+      </select>
+  
+      <label for="orderFor"> ordenar por:</label>
+      <select name="orderFor" id="orderFor">
+        <option value="value1"selected>A-Z</option>
+        <option value="value2" >Z-A</option>
+        <option value="value3">more movies</option>
+        <option value="value3">less movies</option>
+      </select>
+      
+      </form>
+    </div>
+
+    <div id="aboutUs" class="flexContainer">
+    </div>
+  </main>  
+
+  <footer>
+    <div id="footer"> 
+        
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js">
+  </script>
 </body>
 </html>

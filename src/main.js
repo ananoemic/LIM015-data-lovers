@@ -22,7 +22,7 @@ const filmsdata = data["films"];
             </p>
             <p> Producer: "${pelicula['producer']}"
             </p>
-
+            
             </div>
     </div>`;
 
@@ -35,6 +35,4 @@ const filmsdata = data["films"];
 }
 
  peliculas ()
-
-
 
