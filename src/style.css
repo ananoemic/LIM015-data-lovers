@@ -196,3 +196,10 @@ a:hover{
 
 }
 
+.principal{
+    width: 100%;
+    height: 500px; /*Eliminar si se desea que ocupe todo el alto*/
+}
+.films{
+    display: flex;
+}

@@ -1,4 +1,4 @@
-export default {
+const data = {
   "studio": "Studio Ghibli Inc.",
   "films": [
     {
@@ -2453,3 +2453,4 @@ export default {
     }
   ]
 }
+export default data
