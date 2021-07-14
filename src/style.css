@@ -24,7 +24,7 @@
     list-style: none;
 }
 
-.navigation ulgit li{
+.navigation ul li{
     display: inline-block;
     align-items: stretch;
 }
@@ -203,4 +203,3 @@ a:hover{
 .films{
     display: flex;
 }
-  
