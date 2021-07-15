@@ -1,4 +1,4 @@
-import data from './data/ghibli/ghibli.js';
+import data from 'data/ghibli/ghibli.js';
 
  
 function peliculas (){
@@ -30,4 +30,10 @@ const filmsdata = data["films"];
 }
 
  peliculas ()
+
+ //para mostrar y ocultar
+
+ function mostrarOcultar(){
+     document.getElementById("films2")
+ }
 

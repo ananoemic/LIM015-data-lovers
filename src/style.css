@@ -100,7 +100,7 @@ a:hover{
 
 @media only screen and (max-width: 767px) {
     .header{
-        background-color:#7fa9ae;
+        display: flex;
         padding:2rem auto;
         position:fixed;
         left: 0;
@@ -109,6 +109,7 @@ a:hover{
         justify-content: center;
     
     }
+
     .navigation{
         width: 100%;
         margin-top: 1rem;
@@ -122,11 +123,14 @@ a:hover{
         display: block;
         padding: 0.5rem;
         transition: all 0.4s linear;
+        align-items: center;
+    
     }
     
     .logo-nav-container{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+
     }
     
     .header a{
