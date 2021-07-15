@@ -2,119 +2,223 @@
 <html lang="en">
 <head> 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Studio Ghibli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Ghibli icon" href="img/favicon.ico">
     <link rel="stylesheet" href="./style.css">
-    <title>Studio Ghibli</title>
+
 </head>
+
 <body>
-  <header class="header" >
-    <div class="container logo-nav-container">
-      <img src="img/logo.png" alt="logo" class="logo-img">
-      <nav class="navigation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Staff</a></li>
-          <li><a href="#">Films</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <header id="header">
+    <div class="header"><h1>Studio Ghibli </h1>
+      <link  rel="shortcut icon" href="img/icon-anime.png">
     </div>
-
-    <div id="menu" class="menu">
-      
-    </div>
-  </header>
-  <main class="container main">
-    <!-- agrego slider -->
-    <div class="slider">
-    <ul>
-      <li><img src="slider/1.png" alt=""></li>
-      <li><img src="slider/2.jpg" alt=""></li>
-      <li><img src="slider/3.jpg" alt=""></li>
-      <li><img src="slider/4.jpg" alt=""></li>
-      <li><img src="slider/5.jpg" alt=""></li>
-      <li><img src="slider/6.jpg" alt=""></li>
-    </ul>
-    </div>
-
-    <div id="categories" class="flexContainer">
-    <div id="contenedorImagenes" class="flexContainer" >      
-      <figure id="filmsEnlace" >
-        <a href="./films.html" class="flexItem">
-          <img src="img/tarjeta.jpg" alt="films">
-        </a>
-        <figcaption> Films </figcaption>
-      </figure>
-
-      <figure id="staffEnlace">
-        <a href="./staff.html" class="flexItem">
-          <img src="img/tarjeta.jpg" alt="staff">
-        </a>
-        <figcaption> Staff </figcaption>
-      </figure>
-
-      <figure id="aboutUsEnlace">
-        <a href="./aboutUs.html" class="flexItem">
-          <img src="img/tarjeta.jpg" alt="aboutUs">
-        </a>
-        <figcaption>About Us</figcaption>
-      </figure> 
-    </div>
-    </div>
-
-    <div id="films2" class="flexContainer">
-    <form>
-    <label for="filterFilms"> filtrar por:</label>
-    <select name="filterFilms" id="filterFilms">
-      <option value="value1"selected>Movies and Series</option>
-      <option value="value2" >Personajes</option>
-      <option value="value3">Locaciones</option>
-      <option value="value3">Vehículos</option>
-    </select>
-
-    <label for="orderFor"> ordenar por:</label>
-    <select name="orderFor" id="orderFor">
-      <option value="value1"selected>A-Z</option>
-      <option value="value2" >Z-A</option>
-      <option value="value3">Release Old</option>
-      <option value="value3">Release Young</option>
-    </select>
     
-    </form>
-    </div>
+    <div class="row">
+        <div clas="col-3 col-s-3" menu>
+              <ul>
+                <li id="homeButton"><a>Home</a></li>
+                <li id="filmsButton"><a>Films</a></li>
+                <li id="staffButton"><a>Staff</a></li>
+                <li id= "aboutButton"><a>About Us</a></li>
+              </ul>
+        </div>
+      </div>
+  </header> 
 
-    <div id="staff" class="flexContainer">
-      <form>
-      <label for="filterFilms"> filtrar por:</label>
-      <select name="filterFilms" id="filterFilms">
-        <option value="value1"selected>Directores</option>
-        <option value="value2" >Productores</option>
-      </select>
-  
-      <label for="orderFor"> ordenar por:</label>
-      <select name="orderFor" id="orderFor">
-        <option value="value1"selected>A-Z</option>
-        <option value="value2" >Z-A</option>
-        <option value="value3">more movies</option>
-        <option value="value3">less movies</option>
-      </select>
+  <main class="col-3 col-s-12">
+    <div class="main">
+
+      <article id="principalScreen" class="screen 1">
+
+      </article>
+    
+      <article id="filmScreen" class="screen 2">
+      <section id="filmFilter" class="forms">
+        <form>
+          <label for="filter1">Filter:</label>
+          <select name="filter1" id="filter1"">
+            <option value="1">Movies</option>
+            <option value="2">Characters</option>
+            <option value="3">Locations</option>
+          </select>
       
-      </form>
-    </div>
+          <label for="sort1">Sort by:</label>
+          <select name="sort1"" id="sort1">
+            <option value="1">All time</option>
+            <option value="2" >A-Z</option>
+            <option value="3">Recently popular</option>
+            <option value="4">Release Year</option>
+          </select>
+        </form>
+      </section>
+      
+      <section id="filmsData">
+        
+      </section>
 
-    <div id="aboutUs" class="flexContainer">
+      </article>
+
+      <article id="staffScreen" class="screen 3">
+      <section id="staffFilter" class="forms">
+        <form>
+          <label for="filter2">Filter:</label>
+          <select name="filter2" id="filter2"">
+            <option value="1">Producers</option>
+            <option value="2">Directors</option>
+          </select>
+      
+          <label for="sort2">Sort by:</label>
+          <select name="sort2"" id="sort2">
+            <option value="1">All time</option>
+            <option value="2" >A-Z</option>
+            <option value="3">Most popular</option>
+          </select>
+        </form>
+      </section>
+      <section id="staffs">
+        
+      </section>
+      </article>
+
+      <article id="aboutScreen" class="screen 4">
+      <section id="information">
+        <h1>About Us</h1>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+        <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+          Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+          animados como Mi vecino Totoro, El viaje de Chihiro o
+          El castillo ambulante, entre otros grandes éxitos.
+          
+          Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+          varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+          interactuar y ver la información de las animaciones y sus personajes.
+        </p>
+
+      </section>
+
+      </article>
+
     </div>
   </main>  
-
-  <footer>
-    <div id="footer"> 
-        
+</body>
+  <footer class="footer">
+    <div id="footer">
+      <p>Grup
+        o administrado por Keyla, Emily y Noemi</p>
     </div>
-  </footer>
-
   <script type="module" src="./main.js">
   </script>
-</body>
+
 </html>
