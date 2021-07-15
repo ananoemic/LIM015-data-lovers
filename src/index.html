@@ -2,114 +2,96 @@
 <html lang="en">
 <head> 
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Studio Ghibli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Ghibli icon" href="img/favicon.ico">
     <link rel="stylesheet" href="./style.css">
-    <title>Estudios Ghibli</title>
+
 </head>
+
 <body>
-  <header class="header" >
-    <div class="container logo-nav-container">
-      <img src="img/logo.png" alt="logo" class="logo-img">
-      <nav class="navigation">
-        <ul>
-          <li id="home"><a href="#">Home</a></li>
-          <li id="staff"><a href="#">Staff</a></li>
-          <li id="films"><a href="#">Films</a></li>
-          <li id="about"><a href="#">About</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main class="container main">
-    <!-- agrego slider -->
-    <div class="slider">
-    <ul>
-      <li><img src="slider/1.png" alt=""></li>
-      <li><img src="slider/2.jpg" alt=""></li>
-      <li><img src="slider/3.jpg" alt=""></li>
-      <li><img src="slider/4.jpg" alt=""></li>
-      <li><img src="slider/5.jpg" alt=""></li>
-      <li><img src="slider/6.jpg" alt=""></li>
-    </ul>
-    </div>
 
-    <div id="categories" class="flexContainer mostrar">
-      <figure id="filmsEnlace" >
-        <a href="./films.html" class="flexItem">
-          <img src="img/tarjeta.jpg" alt="films">
-        </a>
-        <figcaption> Films </figcaption>
-      </figure>
+  <header id="header" class="header">
+    <span><img class="logo" src="img/logo.png" alt="logo studio Ghibli"></span>
+    <span><input id="search" type="text" placeholder="  search"> <img class="search"  src="img/loupe.png" alt="search"> </span>
+    <span><button id="home" class="btnHeader">Home</button>
+      <button id="aboutUs" class="btnHeader">About Us</button>
+    </span>
+  </header> 
 
-      <figure id="staffEnlace">
-        <a href="./staff.html" class="flexItem">
-          <img src="img/tarjeta.jpg" alt="staff">
-        </a>
-        <figcaption> Staff </figcaption>
-      </figure>
-
-      <figure id="aboutUsEnlace">
-        <a href="./aboutUs.html" class="flexItem">
-          <img src="img/tarjeta.jpg" alt="aboutUs">
-        </a>
-        <figcaption>About Us</figcaption>
-      </figure> 
-    </div>
-    
-
-    <div id="films2" class="flexContainer ocultar">
-    <form>
-    <label for="filterFilms"> filtrar por:</label>
-    <select name="filterFilms" id="filterFilms">
-      <option value="value1"selected>Movies and Series</option>
-      <option value="value2" >Personajes</option>
-      <option value="value3">Locaciones</option>
-      <option value="value3">Vehículos</option>
-    </select>
-
-    <label for="orderFor"> ordenar por:</label>
-    <select name="orderFor" id="orderFor">
-      <option value="value1"selected>A-Z</option>
-      <option value="value2" >Z-A</option>
-      <option value="value3">Release Old</option>
-      <option value="value3">Release Young</option>
-    </select>
-    
-    </form>
-    </div>
-
-    <div id="staff" class="flexContainer">
-      <form>
-      <label for="filterFilms"> filtrar por:</label>
-      <select name="filterFilms" id="filterFilms">
-        <option value="value1"selected>Directores</option>
-        <option value="value2" >Productores</option>
-      </select>
-  
-      <label for="orderFor"> ordenar por:</label>
-      <select name="orderFor" id="orderFor">
-        <option value="value1"selected>A-Z</option>
-        <option value="value2" >Z-A</option>
-        <option value="value3">more movies</option>
-        <option value="value3">less movies</option>
-      </select>
-      
-      </form>
-    </div>
-
-    <div id="aboutUs" class="flexContainer">
-    </div>
-  </main>  
-
-  <footer>
-    <div id="footer"> 
+  <main id="main" class="conteiner">
+      <article>
         
-    </div>
-  </footer>
+      </article>
+
+
+      <article id="slider" class="slider" style="display: block">
+        <img id="imgSlider1" src="img/principal.jpg">
+        <img id="imgSlider2" style=display:none src="img/principal2.jpg">
+        <img id="imgSlider3" style=display:none src="img/principal3.jpg">
+      </article>
+    
+      <article id="filtersContainer" class="filtersContainer">
+        <div id="filter" class="filters">
+          <form>
+            <label for="selectFilter">Filter:</label>
+            <select name="selectFilter" id="selectFilter" class="select">
+              <option value="1">Films</option>
+              <option value="2">Directors</option>
+              <option value="3">Producers</option>
+            </select>
+            </form>
+          </div>
+
+        <div id="sort" class="filters">
+          <form>
+            <label for="selectSort">Sort by:</label>
+            <select name="selectSort" id="selectSort" class="select">
+              <option value="1">A-Z</option>
+              <option value="2">Z-A</option>
+              <option value="3">Year (+)</option>
+              <option value="3">Year (-)</option>
+              <option value="3">Score (+)</option>
+              <option value="3">Score (-)</option>
+            </select>
+            </form>
+          </div>
+      </article>
+
+      <article id="filmsData" class="filmsData">
+      </article>
+
+      <article id="aboutUsContainer" style="display: none">
+        <section id="information" class="aboutUsClass">
+          <h1>About Us</h1>
+          <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+            Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+            animados como Mi vecino Totoro, El viaje de Chihiro o
+            El castillo ambulante, entre otros grandes éxitos.
+            
+            Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+            varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+            interactuar y ver la información de las animaciones y sus personajes.
+          </p>
+        </section>
+      </article>
+
+  </main>  
+</body>
+
+<footer>
+  <p class="footer">follow Us</p>
+  <div id="logosFooter" class="logosFooter">
+    <img class="iconFooter" src="img/facebook.png" alt="logo facebook"> 
+    <img class="iconFooter" src="img/instagram.png" alt="logo instagram">
+    <img class="iconFooter" src="img/gmail.png" alt="logo gmail">  
+  </div>
+
+  <div>
+    <p class="footer">Grupo administrado por Keyla, Emily y Noemi</p>
+  </div>
+</footer>
 
   <script type="module" src="./main.js">
   </script>
-</body>
 </html>
