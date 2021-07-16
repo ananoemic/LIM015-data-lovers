@@ -12,38 +12,37 @@
 <body>
 
   <header id="header" class="header">
-    <span><img class="logo" src="img/logo.png" alt="logo studio Ghibli"></span>
-    <span><input id="search" type="text" placeholder="  search"> <img class="search"  src="img/loupe.png" alt="search"> </span>
-    <span><button id="home" class="btnHeader">Home</button>
-      <button id="aboutUs" class="btnHeader">About Us</button>
-    </span>
+    <span><img id="logoHome" class="logo" src="img/logo.png" alt="logo studio Ghibli"></span>
+    <span id="btnFilms" class="btnHeader">Films</span>
+      <span id="btnAboutUs" class="btnHeader">About Us</span>
+    
   </header> 
 
   <main id="main" class="conteiner">
-      <article>
-        
-      </article>
 
-
-      <article id="slider" class="slider" style="display: block">
+      <article id="slider" class="slider">
         <img id="imgSlider1" src="img/principal.jpg">
         <img id="imgSlider2" style=display:none src="img/principal2.jpg">
         <img id="imgSlider3" style=display:none src="img/principal3.jpg">
       </article>
     
-      <article id="filtersContainer" class="filtersContainer">
-        <div id="filter" class="filters">
+      <article id="filmsContainer" class="filmsContainer">
+
+        <section id=generalSearch  class="filters">
+          <input id="search" type="text" placeholder="   search..."> <img  class="search"  src="img/loupe.png" alt="search">
+        </section>
+
+        <section id="filter" class="filters">
           <form>
             <label for="selectFilter">Filter:</label>
             <select name="selectFilter" id="selectFilter" class="select">
-              <option value="1">Films</option>
-              <option value="2">Directors</option>
-              <option value="3">Producers</option>
+              <option value="1">Directors</option>
+              <option value="2">Producers</option>
             </select>
             </form>
-          </div>
+        </section>
 
-        <div id="sort" class="filters">
+        <section id="sort" class="filters">
           <form>
             <label for="selectSort">Sort by:</label>
             <select name="selectSort" id="selectSort" class="select">
@@ -55,13 +54,15 @@
               <option value="3">Score (-)</option>
             </select>
             </form>
-          </div>
+        </section>
+
+        <section id="filmsData" class="filmsData">
+        </section>
+
       </article>
 
-      <article id="filmsData" class="filmsData">
-      </article>
 
-      <article id="aboutUsContainer" style="display: none">
+      <article id="aboutUsContainer">
         <section id="information" class="aboutUsClass">
           <h1>About Us</h1>
           <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
@@ -82,9 +83,10 @@
 <footer>
   <p class="footer">follow Us</p>
   <div id="logosFooter" class="logosFooter">
-    <img class="iconFooter" src="img/facebook.png" alt="logo facebook"> 
-    <img class="iconFooter" src="img/instagram.png" alt="logo instagram">
-    <img class="iconFooter" src="img/gmail.png" alt="logo gmail">  
+     
+    <a title="ghibli facebook" href="https://es-la.facebook.com/StuGhibliLat/" target="_blank"><img class="iconFooter" src="img/facebook.png" alt="logo facebook"></a>
+    <a title="ghibli facebook" href="https://www.instagram.com/ghibli.movies/?hl=es" target="_blank"><img class="iconFooter" src="img/instagram.png" alt="logo instagram"></a>
+    <a title="ghibli facebook" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img class="iconFooter" src="img/gmail.png" alt="logo gmail"> </a> 
   </div>
 
   <div>

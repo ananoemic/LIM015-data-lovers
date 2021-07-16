@@ -8,7 +8,6 @@ header {
     background-color:#BDBDB1;
     font-family: Stalinist One;
     text-align: center;
-    position: sticky;
 }
 
 html {
@@ -51,13 +50,12 @@ html {
 }
 
 .slider{
+    display: block;
     padding: 20px;
     text-align: center;
 }
 
 .filtersContainer{
-    display: flex;
-    flex-direction: row;
     padding: 40px;
     justify-content: center;
     margin: 20px 20px;
@@ -85,7 +83,7 @@ label{
 }
 
 .aboutUsClass{
-    display:flex;
+    display: none;
     background-color: cornsilk;
     border:darkblue;
     flex-direction: column;
@@ -109,6 +107,18 @@ footer{
     margin-right: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#filmsContainer{
+    display:none;
+}
+
+#aboutUsContainer{
+    display: none;
+}
+
+#slider{
+    display: block;
 }
 /*@import url('https://fonts.googleapis.com/css2?family=Quantico:ital,wght@1,700&family=Stalinist+One&display=swap');
 
