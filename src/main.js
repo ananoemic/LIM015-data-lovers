@@ -1,4 +1,5 @@
 import data from './data/ghibli/ghibli.js';
+
 const filmsdata = data["films"];
 const filmshtml = document.getElementById("peliculasData"); 
 
@@ -74,12 +75,104 @@ function peliculasPorSeleccion(peliculas){
  function filterData(data,conditions){
   //Data son las peliculas
   //El resulta ya tiene las peliculas filtradas
-    let result=data.filter(pelicula=>pelicula['director']==conditions)
-    return result;
+    let resultFilter=data.filter(pelicula=>pelicula['director']==conditions)
+    return resultFilter;
 
  }
 
- function orderData(data,sortOrder){
+ function orderData(data,conditions){
+    let resultOrder=[];
+    // Lo que 1ero que debemos saber es la condicion,
+    // para saber como se va ordenar
+    
+            if(conditions==1){  
+            // Esta condicion es para ordenar A-Z 
+
+            resultOrder=data.sort(function (p1, p2){
+
+                    if(p1["title"]>p2["title"]){
+                    return 1;
+                    }
+                    if( p1["title"]<p2["title"]){
+                    return -1;
+                    }
+                    return 0;
+                })
+
+              }else if(conditions==2){ 
+            // Esta condicion es para ordenar Z-A
+                 resultOrder=data.sort(function (p1, p2){
+
+                    if(p1["title"]<p2["title"]){
+                    return 1;
+                    }
+                    if( p1["title"]>p2["title"]){
+                    return -1;
+                    }
+                    return 0;
+                })
+
+              }else if(conditions==3){
+            // Esta condicion es para ordenar Year(+)
+            
+            resultOrder=data.sort(function (p1, p2){
+
+                if(p1["release_date"]>p2["release_date"]){
+                return 1;
+                }
+                if( p1["release_date"]<p2["release_date"]){
+                return -1;
+                }
+                return 0;
+            })
+
+              }else if(conditions==4){
+            //Esta condicion es para ordenar Year(-)  
+            resultOrder=data.sort(function (p1, p2){
+
+                if(p1["release_date"]<p2["release_date"]){
+                return 1;
+                }
+                if( p1["release_date"]>p2["release_date"]){
+                return -1;
+                }
+                return 0;
+            })
+            
+              }else if(conditions==5){
+            //Esta condicion es para ordenar Score(+)
+            resultOrder=data.sort(function (p1, p2){
+
+                if(p1["rt_score"]>p2["rt_score"]){
+                return 1;
+                }
+                if( p1["rt_score"]<p2["rt_score"]){
+                return -1;
+                }
+                return 0;
+
+            })
+
+
+              }else if(conditions==6){
+                //Esta condicion es para ordenar Score(-)
+
+                resultOrder=data.sort(function (p1, p2){
+
+                    if(p1["rt_score"]<p2["rt_score"]){
+                    return 1;
+                    }
+                    if( p1["rt_score"]>p2["rt_score"]){
+                    return -1;
+                    }
+                    return 0;
+    
+                })
+            
+
+              }
+              return resultOrder;
+
 
  }
 
@@ -88,7 +181,7 @@ botonFiltrar.addEventListener('click',(e)=>{
     e.preventDefault();
     let filterBy=document.getElementById('selectFiltro').value;
     let result=filterData(filmsdata,filterBy);
-    console.log(result);
+    
     peliculasPorSeleccion(result);
 })
 
@@ -96,8 +189,9 @@ let botonOrdenar=document.getElementById('ordenar');
 botonOrdenar.addEventListener('click',()=>{
     
     let orderBy=document.getElementById('selectOrden').value;
-    console.log(orderBy);
-    orderData(filmsdata,orderBy)
+    //console.log(orderBy);
+    let result=orderData(filmsdata,orderBy);
+   peliculasPorSeleccion(result);
 
 });
 
