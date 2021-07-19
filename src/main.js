@@ -35,7 +35,7 @@ function peliculasDefault() {
   filmshtml.innerHTML = htmls;
 }
 
-//peliculasDefault();
+peliculasDefault();
 // Ejecutamos por defecto la función; cuando carga las peliculas al inicio (carga pagina films)
 
 function peliculasPorSeleccion(peliculas) {
@@ -128,41 +128,46 @@ function orderData(data, conditions) {
       }
       return 0;
     });
-  /*} else if (conditions == 5) {
-    //Esta condicion es para ordenar Score(+)
-    resultOrder = data.sort(function (p1, p2) {
-      if (p1["rt_score"] > p2["rt_score"]) {
-        return 1;
-      }
-      if (p1["rt_score"] < p2["rt_score"]) {
-        return -1;
-      }
-      return 0;
-    });
-  } else if (conditions == 6) {
-    //Esta condicion es para ordenar Score(-)
-
-    resultOrder = data.sort(function (p1, p2) {
-      console.log(p1,p2);
-      if (p1["rt_score"] < p2["rt_score"]) {
-        return 1;
-      }
-      if (p1["rt_score"] > p2["rt_score"]) {
-        return -1;
-      }
-      return 0;
-    });
-  }*/
-}
-  else if(conditions==6){
-    let resultOrder = data.sort((a,b)=>{
-      return a.rt_score-b.rt_score;
+    /*} else if (conditions == 5) {
+      //Esta condicion es para ordenar Score(+)
+      resultOrder = data.sort(function (p1, p2) {
+  
+        if (parseInt(p1["rt_score"]) > parseInt(p2["rt_score"])) {
+          return 1;
+        }
+        if (parseInt(p1["rt_score"]) < parseInt(p2["rt_score"])) {
+          return -1;
+        }
+        return 0;git 
+  
+      })
+  
+    } else if (conditions == 6) {
+      //Esta condicion es para ordenar Score(-)
+  
+      resultOrder = data.sort(function (p1, p2) {
+  
+        if (parseInt(p1["rt_score"]) < parseInt(p2["rt_score"])) {
+          
+          return 1;
+        }
+        if (parseInt(p1["rt_score"]) > parseInt(p2["rt_score"])) {
+          
+          return -1;
+        }
+        return 0;
+      });
+    }*/
+  }
+  else if (conditions == 6) {
+    let resultOrder = data.sort((a, b) => {
+      return a.rt_score - b.rt_score;
     })
     return resultOrder;
 
-  }else if(conditions==5){
-    let resultOrder = data.sort((a,b)=>{
-      return a.rt_score-b.rt_score;
+  } else if (conditions == 5) {
+    let resultOrder = data.sort((a, b) => {
+      return a.rt_score - b.rt_score;
     })
     return resultOrder.reverse();
   }
