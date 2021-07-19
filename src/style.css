@@ -294,7 +294,9 @@ header a:hover{
 
 }
 
-.unete .formulario{
+/* -- formulario-suscripción --> */
+
+.formulario{
     position: relative;
     z-index: 3;
     background: white;
@@ -304,11 +306,11 @@ header a:hover{
     margin-top: -6.25rem;
     width: 90%;
 }
-.unete .formulario_contacto .input-group{
+.formulario_contacto .input-group{
     position:relative;
     margin-bottom: 2rem;
 }
-.unete .formulario_contacto .input-group input {
+.formulario_contacto .input-group input {
     font-family:'Times New Roman', Times, serif;
     font-size: 1rem;
     color: black;
@@ -317,20 +319,17 @@ header a:hover{
     padding: 0.9375rem 0;
     background: none;
     border:none;
-    border-bottom: 2px solid #926e00;
+    border-bottom: 2px solid #68500ab2;
     vertical-align: top;
 }
 
-.unete .formulario_contacto .input-group input:focus{
-    border-bottom: 2px solid #ffbf00;
+.formulario_contacto .input-group input:focus{
+    border-bottom: 2px solid #d3a417;
 }
 
-.unete .formulario_contacto .input-group label{
+.formulario_contacto .input-group label{
     color: grey;
 
-}
-
-.unete .formulario_contacto .input-group .label{
     position: absolute;
     top: 1rem;
     left: 0;
@@ -342,24 +341,24 @@ header a:hover{
     transition: all .3s ease;
 }
 
-.unete .formulario_contacto .input-group .label .active{
-    top: -.75rem;
+.formulario_contacto .input-group .label.active{
+    top: -0.75rem;
     margin-left:0;
     font-size: 0.75rem;
     line-height: 0.75rem;
     color: grey;
 }
 
-.unete .formulario_contacto .input-group .error{
+.formulario_contacto .input-group .error{
     position: absolute;
     color: red;
     font-family:'Courier New', Courier, monospace;
     font-size: 0.875rem;
 }
 
-.unete .formulario_contacto input{
+.formulario_contacto input[type="submit"]{
     font-family: 'Saira';
-    background: #926e00;
+    background: #997300;
     color: white;
     border-radius: 1px;
     border: 2px solid white;
@@ -374,15 +373,15 @@ header a:hover{
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
-.unete .formulario_contacto input:hover{
-    background: #664d00;
+.formulario_contacto input[type="submit"]:hover{
+    background: #463400;
 }
 
 
 /*-- footer */
 
 footer{
-    margin-top: 2.25rem;
+    margin-top: 1.125rem;
     background: #8BACAD;
     padding: 2.8125rem 0;
     text-align: center;
@@ -391,17 +390,104 @@ footer{
 }
 
 footer .bottom-redes{
-    margin-top: 2.25rem;
+    margin-top: 1.125rem;
 }
 
 footer a{
     padding: 0 2.8125rem;
     color: white;
-    -webkit-animation: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
 footer a:hover{
     color:#926e00;
+}
+
+/* ******************************
+   *Media Queries*
+****************************** */
+
+@media all and (max-width: 1500px){
+    .main .portada .col .texto{
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+}
+
+@media all and (max-width:1199px){
+    .main .portada .col .foto{
+        display: none;
+    }
+    .main .portada .col .texto{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 980px){
+    .nosotros .container .col.izq{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgb(190, 188, 188);
+        text-align: center;
+        display: block;
+        padding: 0;
+        margin-bottom: 2.25rem;
+    }
+    .nosotros .container .col.der{
+        width: 100%;
+        padding-left: 0;
+        text-align: justify;
+    }
+    .unete .datos .container .blurb{
+        width: 100%;
+        max-width:40.625rem;
+        margin: 0 auto;
+        margin-bottom: 2.25rem;
+    }
+    .unete .datos .container .blurb:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media all and (max-width: 800px){
+    .main .portada .col{
+        width:100%;
+    }
+    .main .foto-full.der{
+        display:none;
+    }
+    .main .texto h2{
+        text-align: center;
+    }
+    .main .texto p{
+        text-align: justify;
+    }
+
+    .archivo .container .col{
+        width: 100%;
+    }
+    
+    .archivo .container .col .titulo-seccion{
+        padding-left: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+}
+
+@media all and (max-width:580px){
+    .titulo-seccion h2{
+        font-size:2rem;
+    }
+
+    .nosotros .container .col.der .texto p{
+        font-size: 1rem;
+    }
+    .archivo .container .col .titulo-seccion p{
+        font-size: 1rem;
+    }
+    .formulario_contacto input[type="submit"]{
+        width:100%;
+    }
 }
