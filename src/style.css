@@ -83,7 +83,6 @@ label{
 }
 
 .aboutUsClass{
-    display: none;
     background-color: cornsilk;
     border:darkblue;
     flex-direction: column;
