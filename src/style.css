@@ -61,6 +61,52 @@ header a:hover{
     color: #926e00;
 }
 
+.menu-bar-movil{
+    background: #8BACAD;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top:0;
+    padding: 0 2.25rem;
+    display:none;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5.875rem;
+    border-bottom: 1px solid grey;
+}
+
+.menu-bar-movil .burger-menu{
+    cursor:pointer;
+    font-size: 2.1875;
+}
+
+.menu-bar-movil .slideMenu{
+    position: fixed;
+    top: 5.875rem;
+    left: -80%;
+    background: white;
+    text-align: center;
+    padding: 1.25rem 2.25rem;
+    width: 80%;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;;
+    transition: all .3s ease;
+}
+.menu-bar-movil .slideMenu .active{
+    left:0;
+}
+.menu-bar-movil .slideMenu .top-redes{
+    margin-bottom: 0.625rem;
+}
+.menu-bar-movil .slideMenu .top-redes a{
+    padding-left: 0 0.5625rem;
+}
+.menu-bar-movil .slideMenu .menu-principal a{
+    display: block;
+    padding: 0.625rem 0;
+    border-top: 1px solid rgb(165, 163, 163); 
+}
 
 /*main*/
 
@@ -452,6 +498,13 @@ footer a:hover{
 }
 
 @media all and (max-width: 800px){
+    header .menu-bar-pc{
+        display: none;
+    }
+    header .menu-bar-movil{
+        display: flex;
+    }
+
     .main .portada .col{
         width:100%;
     }
@@ -491,3 +544,4 @@ footer a:hover{
         width:100%;
     }
 }
+
