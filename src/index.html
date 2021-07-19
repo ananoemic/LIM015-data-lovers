@@ -16,7 +16,6 @@
     <a href="./films.html" id="btnFilms" class="btnHeader">Films</a>
       <span id="btnAboutUs" class="btnHeader">About Us</span>
   </header>
-  
   <main id="main" class="conteiner">
 
       <article id="slider" class="slider">
@@ -25,38 +24,44 @@
         <img id="imgSlider3" style=display:none src="img/principal3.jpg">
       </article>
     
-      <article id="filmsContainer" class="filmsContainer">
+     <!-- <article id="filmsContainer" class="filmsContainer">
+
 
         <section id=generalSearch  class="filters">
           <input id="search" type="text" placeholder="   search..."> <img  class="search"  src="img/loupe.png" alt="search">
         </section>
 
         <section id="filter" class="filters">
-            <label for="selectFilter">Filter:</label>
-            <select name="selectFilter" id="selectFilter" class="select">
-                <option value="1">Directors</option>
-                <option value="2">Producers</option>
-            </select>
+        <label for="selectFiltro">Filter by director:</label>
+        <select name="selectFiltro" id="selectFiltro">
+          <option value="Opcion">Choose and opcion</option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Isao Takahata">Isao Takahata</option>
+          <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+          <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+          <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+          <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        </select>
+        <button id="filtrar">Filtrar</button>
         </section>
 
         <section id="sort" class="filters">
-            <label for="selectSort">Sort by:</label>
-            <select name="selectSort" id="selectSort" class="select">
+        <label for="selectOrden">Sort by:</label>
+        <select name="selectOrden" id="selectOrden">
+              <option value="0">Choose an option</option>
               <option value="1">A-Z</option>
               <option value="2">Z-A</option>
-              <option value="3">Year (+)</option>
-              <option value="3">Year (-)</option>
-              <option value="3">Score (+)</option>
-              <option value="3">Score (-)</option>
-            </select>
-        </section>
+              <option value="3">Year(+)</option>
+              <option value="4">Year(-)</option>
+              <option value="5">Score(+)</option>
+              <option value="6">Score(-)</option>
+        </select>
+        <button id="ordenar">Ordenar</button>
+      </section>
 
-        <section id="filmsData" class="filmsData">
-          <p>Hola</p>
-        </section>
 
       </article>
-
+      --> 
 
       <article id="aboutUsContainer">
         <section id="information" class="aboutUsClass">
