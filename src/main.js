@@ -128,7 +128,7 @@ function orderData(data, conditions) {
       }
       return 0;
     });
-  } else if (conditions == 5) {
+  /*} else if (conditions == 5) {
     //Esta condicion es para ordenar Score(+)
     resultOrder = data.sort(function (p1, p2) {
       if (p1["rt_score"] > p2["rt_score"]) {
@@ -143,6 +143,7 @@ function orderData(data, conditions) {
     //Esta condicion es para ordenar Score(-)
 
     resultOrder = data.sort(function (p1, p2) {
+      console.log(p1,p2);
       if (p1["rt_score"] < p2["rt_score"]) {
         return 1;
       }
@@ -151,9 +152,23 @@ function orderData(data, conditions) {
       }
       return 0;
     });
+  }*/
+}
+  else if(conditions==6){
+    let resultOrder = data.sort((a,b)=>{
+      return a.rt_score-b.rt_score;
+    })
+    return resultOrder;
+
+  }else if(conditions==5){
+    let resultOrder = data.sort((a,b)=>{
+      return a.rt_score-b.rt_score;
+    })
+    return resultOrder.reverse();
   }
   return resultOrder;
 }
+
 
 let botonFiltrar = document.getElementById("filtrar");
 botonFiltrar.addEventListener("click", (e) => {

@@ -26,3 +26,15 @@ btnFilms.addEventListener("click", () => {
   aboutContainer.style.display = "none";
   slider.style.display = "none";
 });
+
+import data from "./data/ghibli/ghibli.js";
+/*
+//para crear una section con js
+const sectionFilms = document.createElement('div');
+sectionFilms.innerText= 'hola! esta es una prueba';
+document.body.appendChild(sectionFilms);
+//para darle un id
+sectionFilms.id= 'dataFilms2';
+
+console.log(data.films);
+*/
