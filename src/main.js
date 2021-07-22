@@ -35,7 +35,7 @@ function peliculasDefault() {
   filmshtml.innerHTML = htmls;
 }
 
-//peliculasDefault();
+peliculasDefault();
 // Ejecutamos por defecto la función; cuando carga las peliculas al inicio (carga pagina films)
 
 function peliculasPorSeleccion(peliculas) {
