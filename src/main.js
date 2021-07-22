@@ -2,7 +2,7 @@ import data from "./data/ghibli/ghibli.js";
 
 const filmsdata = data["films"];
 const filmshtml = document.getElementById("peliculasData");
-
+//console.log();
 let htmls = "";
 
 function peliculasDefault() {
