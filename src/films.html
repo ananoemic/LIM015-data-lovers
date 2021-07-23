@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Films Studio Ghibli</title>
+    <link rel="Ghibli icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!--Cambios emily--> 
+<section>
+  <!--Input de busqueda-->
+  <input type="text" id="buscar" placeholder="Search...">
+  <div class="filtroPeliculas">
+    <label for="selectFiltro">Filter by:</label>
+    <select name="selectFiltro" id="selectFiltro">
+      <option value="Opcion">Choose and option</option>
+      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+      <option value="Isao Takahata">Isao Takahata</option>
+      <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+      <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+      <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+      <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+    </select>
+    <button id="filtrar">Filtrar</button>
+  </div>
+  <div class="orden">
+    <label for="selectOrden">Sort by:</label>
+    <select name="selectOrden" id="selectOrden">
+          <option value="0">Choose an option</option>
+          <option value="1">A-Z</option>
+          <option value="2">Z-A</option>
+          <option value="3">Year(+)</option>
+          <option value="4">Year(-)</option>
+          <option value="5">Score(+)</option>
+          <option value="6">Score(-)</option>
+    </select>
+    <button id="ordenar">Ordenar</button>
+  </div> 
+</section>
+<section id="peliculasData" class="films">
+</section>  
+​
+  <script src="./main.js" type="module"></script>
+</body>
+</html>
