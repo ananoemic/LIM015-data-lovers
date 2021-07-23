@@ -1,8 +1,8 @@
 import data from "./data/ghibli/ghibli.js";
 
 const filmsdata = data["films"];
-console.log(filmsdata);
 const filmshtml = document.getElementById("peliculasData");
+
 let htmls = "";
 
 function peliculasDefault() {
@@ -44,7 +44,7 @@ function peliculasPorSeleccion(peliculas) {
     let auxPelicula = `<div class="films"> 
             <img src= "${pelicula["poster"]}">
                 <div>
-                <h3>${pelicula["title"]}</h3>
+                <h3>${pelicula["title"]}</h3> 
                 <p> 
                 ${pelicula["description"]}
                 </p>
@@ -128,46 +128,40 @@ function orderData(data, conditions) {
       }
       return 0;
     });
-    /*} else if (conditions == 5) {
-      //Esta condicion es para ordenar Score(+)
-      resultOrder = data.sort(function (p1, p2) {
-  
-        if (parseInt(p1["rt_score"]) > parseInt(p2["rt_score"])) {
-          return 1;
-        }
-        if (parseInt(p1["rt_score"]) < parseInt(p2["rt_score"])) {
-          return -1;
-        }
-        return 0;
-  
-      })
-  
-    } else if (conditions == 6) {
-      //Esta condicion es para ordenar Score(-)
-  
-      resultOrder = data.sort(function (p1, p2) {
-  
-        if (parseInt(p1["rt_score"]) < parseInt(p2["rt_score"])) {
-          
-          return 1;
-        }
-        if (parseInt(p1["rt_score"]) > parseInt(p2["rt_score"])) {
-          
-          return -1;
-        }
-        return 0;
-      });
-    }*/
-  }
-  else if (conditions == 5) {
-    let resultOrder = data.sort((a, b) => {
-      return a.rt_score + b.rt_score;
+  /*} else if (conditions == 5) {
+    //Esta condicion es para ordenar Score(+)
+    resultOrder = data.sort(function (p1, p2) {
+      if (p1["rt_score"] > p2["rt_score"]) {
+        return 1;
+      }
+      if (p1["rt_score"] < p2["rt_score"]) {
+        return -1;
+      }
+      return 0;
+    });
+  } else if (conditions == 6) {
+    //Esta condicion es para ordenar Score(-)
+    resultOrder = data.sort(function (p1, p2) {
+      console.log(p1,p2);
+      if (p1["rt_score"] < p2["rt_score"]) {
+        return 1;
+      }
+      if (p1["rt_score"] > p2["rt_score"]) {
+        return -1;
+      }
+      return 0;
+    });
+  }*/
+}
+  else if(conditions==6){
+    let resultOrder = data.sort((a,b)=>{
+      return a.rt_score-b.rt_score;
     })
     return resultOrder;
 
-  } else if (conditions == 6) {
-    let resultOrder = data.sort((a, b) => {
-      return a.rt_score + b.rt_score;
+  }else if(conditions==5){
+    let resultOrder = data.sort((a,b)=>{
+      return a.rt_score-b.rt_score;
     })
     return resultOrder.reverse();
   }
@@ -187,6 +181,7 @@ botonFiltrar.addEventListener("click", (e) => {
 let botonOrdenar = document.getElementById("ordenar");
 botonOrdenar.addEventListener("click", () => {
   let orderBy = document.getElementById("selectOrden").value;
+  //console.log(orderBy);
   let result = orderData(filmsdata, orderBy);
   peliculasPorSeleccion(result);
 });
