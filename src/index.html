@@ -4,88 +4,269 @@
     <meta charset="UTF-8">
     <title>Studio Ghibli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Ghibli icon" href="img/favicon.ico">
     <link rel="stylesheet" href="./style.css">
-​
+    <script src="https://kit.fontawesome.com/73e8eccb54.js" crossorigin="anonymous"></script>
+
 </head>
-​
+
 <body>
-​
-  <header id="header" class="header">
-    <span><img id="logoHome" class="logo" src="img/logo.png" alt="logo studio Ghibli"></span>
-    <a href="./films.html" id="btnFilms" class="btnHeader">Films</a>
-      <span id="btnAboutUs" class="btnHeader">About Us</span>
-  </header>
-​
-  <!--Fin de cambios de emily-->
-  <main id="main" class="conteiner">
-​
-      <article id="slider" class="slider">
-        <img id="imgSlider1" src="img/principal.jpg">
-        <img id="imgSlider2" style=display:none src="img/principal2.jpg">
-        <img id="imgSlider3" style=display:none src="img/principal3.jpg">
-      </article>
-    
-      <article id="filmsContainer" class="filmsContainer">
-​
-        <section id=generalSearch  class="filters">
-          <input id="search" type="text" placeholder="   search..."> <img  class="search"  src="img/loupe.png" alt="search">
-        </section>
-​
-        <section id="filter" class="filters">
-            <label for="selectFilter">Filter:</label>
-            <select name="selectFilter" id="selectFilter" class="select">
-                <option value="1">Directors</option>
-                <option value="2">Producers</option>
-            </select>
-        </section>
-​
-        <section id="sort" class="filters">
-            <label for="selectSort">Sort by:</label>
-            <select name="selectSort" id="selectSort" class="select">
-              <option value="1">A-Z</option>
-              <option value="2">Z-A</option>
-              <option value="3">Year (+)</option>
-              <option value="3">Year (-)</option>
-              <option value="3">Score (+)</option>
-              <option value="3">Score (-)</option>
-            </select>
-        </section>
-      </article>
-​
-​
-      <article id="aboutUsContainer">
-        <section id="information" class="aboutUsClass">
-          <h1>About Us</h1>
-          <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
-            Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
-            animados como Mi vecino Totoro, El viaje de Chihiro o
-            El castillo ambulante, entre otros grandes éxitos.
-            
-            Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
-            varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
-            interactuar y ver la información de las animaciones y sus personajes.
-          </p>
-        </section>
-      </article>
-​
-  </main>  
+
+  <header>   <!-- Encabezado -->
+
+    <div class="menu-bar-pc">
+      <a href="" class="logo">
+        <img src="/src/img/middle.png"" alt="">
+      </a>
+
+      <nav class="menu-principal">
+        <a href="#" class="volver-arriba">Inicio</a>
+        <a href="#nosotros" class="scroll-suave">Nosotros</a>
+        <a href="#archivo" class="scroll-suave">Archivo</a>
+        <a href="#unete" class="scroll-suave">Únete</a>
+      </nav>
+
+      <div class="top-redes">
+        <a href="https://www.facebook.com/WeLoveStudioGhibli/">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/gen_ghibli?lang=en">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/ghibli__fans/?hl=en">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="menu-bar-movil">
+
+      <a href="" class="logo">
+        <img src="/src/img/middle.png"" alt="">
+      </a>
+
+      <div class="burger-menu" id="burger_menu">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="slideMenu" id="slideMenu">
+
+        <div class="top-redes">
+          <a href="https://www.facebook.com/WeLoveStudioGhibli/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/gen_ghibli?lang=en">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/ghibli__fans/?hl=en">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+
+        <nav class="menu-principal">
+          <a href="#" class="volver-arriba">Inicio</a>
+          <a href="#nosotros" class="scroll-suave">Nosotros</a>
+          <a href="#archivo" class="scroll-suave">Archivo</a>
+          <a href="#unete" class="scroll-suave">Únete</a>
+        </nav>  
+        
+      </div>    
+      
+    </div>
+
+  </header> 
+
+
+  <section class="main">
+
+      <!-- portada -->   
+      <section class="portada" id="portada">
+
+        <div class="col">
+          <div class="foto izq">
+          </div>
+
+          <div class="texto">
+            <h2>Haya Miyasaki</h2>
+            <p>Es uno de los hombres más famosos dentro de la animación. En su natal Japón creó en 1985 el Studio Ghibli junto a su colega y amigo Isao Takahata.</p>
+          </div>
+
+          <div class="foto-full izq">
+          </div>
+
+        </div>
+
+        <div class="col">
+
+            <div class="foto-full der">
+            </div>
+
+            <div class="foto der">
+            </div>
+   
+            <div class="texto">
+               <h2>El Castillo en el cielo</h2>
+               <p>Fue el primer título de la compañía, estrenado en Japón un año después. Para 1988 Ghibli se anotó su primer gran éxito en taquilla gracias a Mi vecino Totoro. Fue tal la popularidad que alcanzó en ese país que el personaje de Totoro fue usado a partir de entonces como símbolo de los estudios.</p>
+            </div>   
+        </div>      
+      
+      </section>
+      
+      <!-- nosotros -->
+
+      <section class="nosotros" id="nosotros">
+        <div class="container">
+          <div class="col izq">
+            <div class="titulo-seccion">
+              <p>Nosotros</p>
+              <h2>Conócenos</h2>
+            </div>
+          </div>
+          <div class="col der">
+            <div class="texto">
+              <p>Somos el grupo oficial de fans, en este sito podrás encontrar todo lo relacionado a Studio Ghibli, un estudio de animación japonés, conocido por sus largometrajes animados como Mi vecino Totoro, El viaje de Chihiro o El castillo ambulante, entre otros grandes éxitos.
+                Recopilamos toda la información para que puedas conocer más acerca de las animaciones y sus personajes.
+                </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- archivo -->
+      
+      <section class="archivo" id="archivo">
+        <div class="container">
+          <div class="col izq">
+            <div class="slider" id="slider">
+              <div class="slide foto1"></div>
+              <div class="slide foto2"></div>
+              <div class="slide foto3"></div>
+              <div class="slide foto4"></div>
+              <div class="slide foto5"></div>
+              <div class="slide foto6"></div>
+            </div>
+          </div>
+
+          <div class="col">
+              <div class="titulo-seccion">
+                <h2>Todas las animaciones y personajes</h2> 
+                <p>Recopilación completa. Desde productores, directores hasta lugares que tomaron las animaciones,</p>
+                <p>Tambien puedes filtrarlo. <a  class="despliege" id="filtroBoton">
+                  <i class="fas fa-caret-square-down"></i></a></p>                                
+              </div>
+          </div>
+        </div> 
+      </section>
+
+      
+      <section id="nuestro_filtro" class="filtro-opciones">
+        <div class="container">
+            <div class="titulo-seccion">
+              <h2>Filtra aquí</h2>
+            </div>
+
+            <div class="contenedor-filtro">
+              <label for="filter-select">Buscar:</label>
+              <select name="filter1" id="filter-select">
+                <option value="">Título</option>
+                <option value="">Director</option>
+                <option value="">Productor</option>
+              </select>
+              
+              <label for="filter-sort">Ordenar por:</label>              
+              <select name="filter2" id="filter-sort">
+                <option value=""> A - Z </option>
+                <option value=""> Z - A </option>
+                <option value="">Popularidad </option>
+                <option value="">Por orden de lanzamiento</option>
+              </select>
+
+              <div class="contenido" id="contenido_menu">
+                <!-- el filtrado aquí -->
+                <div class="filtrado">
+                  <div class="item">
+                  </div>
+
+                </div>
+                
+
+              </div>
+
+
+            </div>
+
+
+        </div>
+
+      </section>
+
+      <!-- únete -->
+
+      <section class="unete" id="unete">
+
+        <div class="datos parallax">
+          <div class="overlay"></div>
+          <div class="container">
+
+            <div class="blurb">
+              <h3>Únete</h3>
+              <p>Eres bienvenivo para ser parte de esta comunidad</p>
+            </div>
+
+            <div class="blurb">
+              <h3>Beneficios</h3>
+              <p>Desbloquear más opciones, invitaciones a meet&greets e información inédita.</p>
+            </div>
+
+            <div class="blurb">
+              <h3>Escríbenos</h3>
+              <p>ghibli__fans@gmail.com</p>
+            </div>
+
+          </div>
+
+        </div>
+       
+        <!-- formulario-suscripción -->
+
+        <div class="formulario">
+          <form action="" class="formulario_contacto" name="formulario_contacto">
+              <div class="input-group">
+                <input type="text" id="nombre" name="nombre">
+                <label class="label" for="nombre">Nombre</label>
+              </div>
+              <div class="input-group">
+                <input type="text" id="email" name="email">
+                <label class="label" for="email">Correo electrónico</label>
+              </div>
+
+              <input type="submit" class="unirse" value="Unirme">
+            </div>
+          </form>
+        </div>
+
+
+      </section>
+
+  </section>
+
+  <footer>
+    <p class="copyright">Todos los derechos reservados</p>
+    <div class="bottom-redes">
+      <a href="https://www.facebook.com/WeLoveStudioGhibli/">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com/gen_ghibli?lang=en">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://www.instagram.com/ghibli__fans/?hl=en">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </footer>
+
 </body>
-​
-<footer>
-  <p class="footer">follow Us</p>
-  <div id="logosFooter" class="logosFooter">
-     
-    <a title="ghibli facebook" href="https://es-la.facebook.com/StuGhibliLat/" target="_blank"><img class="iconFooter" src="img/facebook.png" alt="logo facebook"></a>
-    <a title="ghibli facebook" href="https://www.instagram.com/ghibli.movies/?hl=es" target="_blank"><img class="iconFooter" src="img/instagram.png" alt="logo instagram"></a>
-    <a title="ghibli facebook" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img class="iconFooter" src="img/gmail.png" alt="logo gmail"> </a> 
-  </div>
-​
-  <div>
-    <p class="footer">Grupo administrado por Keyla, Emily y Noemi</p>
-  </div>
-</footer>
-​
-  <script type="module" src="./index.js">
-  </script>
+
+<script type="module" src="./main.js"></script>
 </html>

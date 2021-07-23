@@ -1,125 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Merienda&family=Saira:wght@300&display=swap');
+
+
 *{
-    padding: 0px;
-    margin: 0px;
+    margin:0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-header {
-    background-color:#BDBDB1;
-    font-family: Stalinist One;
-    text-align: center;
-}
-
-html {
-    font-family: "Quantico";
-}
-
-.logo{
-    margin-left: 5px;
-    width: 300px;
-    height: 150px;
-}
-
-#search{
-    border-radius: 20px;
+body{
     font-size: 20px;
+    font-family: 'Merienda';
+    color: #303133;
 }
 
-.search{
-    width: 20px;
-    height: 20px;
+.container{
+    width: 90%;
+    max-width: 1080px;
+    margin:0 auto;
 }
 
-.btnHeader{
-    color:rgb(36, 35, 33);
-    background-color: #BDBDB1;
-    font-size:25px;
-    border-radius: 20px;
-    border-color: #BDBDB1;
-    margin-left: 5px;
-    margin-left: 10px;
-    line-height: 50px;
+img{
+    vertical-align: top;
+    max-width: 100%;
+}
+
+header img{
+    width:8em;
+    height:6em;
+}
+
+/*encabezado*/
+
+.menu-bar-pc{
+    background: #8BACAD;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top:0;
+    padding: 0 2.25rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5.875rem;
+    border-bottom: 1px solid grey;
+}
+
+header a{
+    padding: 0 0.5625rem;
+    text-decoration: none;
+    color: black;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3 ease;
+}
+
+header a:hover{
+    color: #926e00;
+}
+
+.menu-bar-movil{
+    background: #8BACAD;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    top:0;
+    padding: 0 2.25rem;
+    display: none;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5.875rem;
+    border-bottom: 1px solid grey;
+}
+
+.menu-bar-movil .burger-menu{
+    cursor:pointer;
+    font-size: 2.1875;
+}
+
+.menu-bar-movil .slideMenu{
+    position: fixed;
+    top: 5.875rem;
+    left: -80%;
+    background: #8BACAD;
     text-align: center;
-    width: 150px;
-    height: 50px;
-    font-weight: bold;
+    padding: 1.25rem 2.25rem;
+    width: 80%;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;;
+    transition: all .3s ease;
 }
-
-.btnHeader:hover{
-    background-color: rgb(126, 126, 139);
+.menu-bar-movil .slideMenu .active{
+    left: 0%;
 }
-
-.slider{
+.menu-bar-movil .slideMenu .top-redes{
+    margin-bottom: 0.625rem;
+}
+.menu-bar-movil .slideMenu .top-redes a{
+    padding-left: 0 0.5625rem;
+}
+.menu-bar-movil .slideMenu .menu-principal a{
     display: block;
-    padding: 20px;
-    text-align: center;
+    padding: 0.625rem 0;
+    border-top: 1px solid rgb(196, 193, 193); 
 }
 
-.filtersContainer{
-    padding: 40px;
-    justify-content: center;
-    margin: 20px 20px;
+/*main*/
+
+.main{
+    margin-top: 5.875rem;  
 }
 
-.filters{
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.select{
-    color:rgb(36, 35, 33);
-    background-color: #BDBDB1;
-    font-size:20px;
-    border-radius: 20px;
-    border-color: #BDBDB1;
-    text-align: center;
-    width: 200px;
-    height: 40px;
-}
-
-label{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.aboutUsClass{
-    background-color: cornsilk;
-    border:darkblue;
-    flex-direction: column;
-    padding-top: 50px;
-    text-align: center;
-    font-size: 20px;
+.titulo-seccion h2{
+    font-size: 3.215rem;
+    font-weight: 400;
+    line-height: 3.6875rem;
+    margin-bottom: 1.125rem;
+    font-style: italic;
+    letter-spacing: -0.02em;
 
 }
-
-footer{
-    background-color:#BDBDB1;
-    font-family: Stalinist One;
-    text-align: center;
-    position: sticky;
+.titulo-seccion p{
+    font-size: 1.25rem;
+    color:black;
 }
 
-.iconFooter{
-    width: 25px;
-    height: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+/*portada*/
+
+.portada{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-#filmsContainer{
+.portada .col{
+    width: 50%;
+    background: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portada .col .foto{
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+.portada .col .foto.izq{
+    background-image: url('/src/img/hayao.jpg');
+    background-position: left;
+    
+}
+
+.portada .col .foto.der{
+    background-image: url('/src/img/castillo.jpg');
+}
+
+.portada .col .texto{
+    width: 50%;
+    padding: 3.375rem;
+}
+.portada .col .texto h2{
+    font-size: 1.8125rem;
+    font-weight: 400;
+    line-height: 2.6875rem;
+    margin-bottom: 1.125rem;
+}
+
+.portada .col .texto p{
+    font-size: 0.9375rem;
+    line-height: 1.75;  
+}
+
+.portada .col .foto-full{
+    width: 100%;
+    min-height: 15.25rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.portada .col .foto-full.izq{
+    background-image: url('/src/img/portada.png')
+}
+.portada .col .foto-full.der{
+    background-image: url('/src/img/totoro.jpg')
+}
+
+/*nosotros*/
+
+.nosotros{
+    padding: 5.625rem 0;
+}
+
+.nosotros .container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.nosotros .container .col.izq{
+    width: 30%;
+    border-right: 1px solid grey;
+    display: flex;
+    align-items: center;
+    padding-right: 5%;
+}
+
+.nosotros .container .col.der{
+    width: 70%;
+    padding-left: 5%;
+}
+
+.nosotros .container .col.der .texto p{
+    font-size: 1.25rem;
+    line-height: 1.75;
+    color: #613A2F;
+    font-family: 'Saira';
+}
+
+/*archivo*/
+
+.archivo{
+  background:#804D3D;
+  padding: 5.625rem 0;
+}
+.archivo .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items:center;
+}
+.archivo .container .col{
+    width:50%;
+}
+.archivo .container .col.izq{
+    box-shadow: 0px 9px 32px -1px rbga(0,0,0,0.5);
+    overflow: hidden;
+}
+.archivo .container .col .titulo-seccion{
+    padding: 3.125rem;
+    padding-right: 0;
+}
+.archivo .container .col .titulo-seccion h2{
+    color:white;
+}
+.archivo .container .col .titulo-seccion p{
+    color: rgba(228, 222, 222, 0.74);
+    padding: 1.125rem;
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+.archivo .container .col .titulo-seccion p:last-child{
+    padding-bottom: 0;
+}
+.archivo .container .col a{
+    color: white;
+}
+
+.archivo .container .col .slider{
+    width: 600%;
+    display:flex;
+}
+
+.archivo .container .col .slider .slide{
+    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+.archivo .container .col .slider .slide.foto1{
+    background-image: url(/src/slider/1.png);
+}
+.archivo .container .col .slider .slide.foto2{
+    background-image: url(/src/slider/2.jpg);
+}
+.archivo .container .col .slider .slide.foto3{
+    background-image: url(/src/slider/3.jpg);
+}
+.archivo .container .col .slider .slide.foto4{
+    background-image: url(/src/slider/4.jpg);
+}
+.archivo .container .col .slider .slide.foto5{
+    background-image: url(/src/slider/5.jpg);
+}
+.archivo .container .col .slider .slide.foto6{
+    background-image: url(/src/slider/6.jpg);
+}
+
+
+/*filtro*/
+#nuestro_filtro{
     display:none;
 }
 
-#aboutUsContainer{
-    display: none;
+.filtro-opciones{
+    padding: 5.625rem 0;
 }
 
-#slider{
+.filtro-opciones .contenedor-filtro {
+    justify-content: space-around;
+}
+
+/*-- únete */
+
+.unete .datos{
+    padding: 5.625rem 0 11.875rem 0;
+    position: relative;
+    background-image: url('/src/fondo/japan.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.unete .datos .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: fade(black, 30%);
+    top: 0;
+    z-index: 1;
+}
+.unete .datos .container{
+    position: relative;
+    z-index: 2;
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.unete .datos .container .blurb{
+    background: white;
+    border: 6px double grey;
+    padding: 2.25rem;
+    text-align: center;
+    width: 25%;
+}
+.unete .datos .container .blurb h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.6875rem;
+    margin-bottom: 1.125rem;
+    border-bottom: 1px solid grey;
+}
+
+.unete .datos .container .blurb p{
+    font-size: 1rem;
+    color: #777;
+
+}
+
+/* -- formulario-suscripción --> */
+
+.formulario{
+    position: relative;
+    z-index: 3;
+    background: white;
+    max-width: 40.625rem;
+    margin: 0 auto;
+    padding: 2.25rem;
+    margin-top: -6.25rem;
+    width: 90%;
+}
+.formulario_contacto .input-group{
+    position:relative;
+    margin-bottom: 2rem;
+}
+.formulario_contacto .input-group input {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1rem;
+    color: black;
+    width: 100%;
+    outline: none;
+    padding: 0.9375rem 0;
+    background: none;
+    border:none;
+    border-bottom: 2px solid #68500ab2;
+    vertical-align: top;
+}
+
+.formulario_contacto .input-group input:focus{
+    border-bottom: 2px solid #d3a417;
+}
+
+.formulario_contacto .input-group label{
+    color: grey;
+
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin-left: 1rem;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.formulario_contacto .input-group .label.active{
+    top: -0.75rem;
+    margin-left:0;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    color: grey;
+}
+
+.formulario_contacto .input-group .error{
+    position: absolute;
+    color: red;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+}
+
+.formulario_contacto input[type="submit"]{
+    font-family: 'Saira';
+    background: #997300;
+    color: white;
+    border-radius: 1px;
+    border: 2px solid white;
+    cursor: pointer;
     display: block;
+    margin: 0 auto;
+    margin-top: 3.125rem;
+    padding: 0.9375rem;
+    width: 20%;
+    outline: none;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.formulario_contacto input[type="submit"]:hover{
+    background: #463400;
 }
 
-.films{
-    background-color: blue;
+
+/*-- footer */
+
+footer{
+    margin-top: 1.125rem;
+    background: #8BACAD;
+    padding: 2.8125rem 0;
+    text-align: center;
+    color: white;
+    font-family: 'Saira';
 }
+
+footer .bottom-redes{
+    margin-top: 1.125rem;
+}
+
+footer a{
+    padding: 0 2.8125rem;
+    color: white;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+footer a:hover{
+    color:#926e00;
+}
+
+/* ******************************
+   *Media Queries*
+****************************** */
+
+@media all and (max-width: 1500px){
+    .main .portada .col .texto{
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+}
+
+@media all and (max-width:1199px){
+    .main .portada .col .foto{
+        display: none;
+    }
+    .main .portada .col .texto{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 980px){
+    .nosotros .container .col.izq{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgb(190, 188, 188);
+        text-align: center;
+        display: block;
+        padding: 0;
+        margin-bottom: 2.25rem;
+    }
+    .nosotros .container .col.der{
+        width: 100%;
+        padding-left: 0;
+        text-align: justify;
+    }
+    .unete .datos .container .blurb{
+        width: 100%;
+        max-width:40.625rem;
+        margin: 0 auto;
+        margin-bottom: 2.25rem;
+    }
+    .unete .datos .container .blurb:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media all and (max-width: 800px){
+    .menu-bar-pc{
+        display: none;
+    }
+    .menu-bar-movil{
+        display:flex;
+    }
+
+    .main .portada .col{
+        width:100%;
+    }
+    .main .foto-full.der{
+        display:none;
+    }
+    .main .texto h2{
+        text-align: center;
+    }
+    .main .texto p{
+        text-align: justify;
+    }
+
+    .archivo .container .col{
+        width: 100%;
+    }
+    
+    .archivo .container .col .titulo-seccion{
+        padding-left: 0;
+        padding-bottom: 0;
+        text-align: center;
+    }
+}
+
+@media all and (max-width:580px){
+    .titulo-seccion h2{
+        font-size:2rem;
+    }
+
+    .nosotros .container .col.der .texto p{
+        font-size: 1rem;
+    }
+    .archivo .container .col .titulo-seccion p{
+        font-size: 1rem;
+    }
+    .formulario_contacto input[type="submit"]{
+        width:100%;
+    }
+}
+
