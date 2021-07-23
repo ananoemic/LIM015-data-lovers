@@ -3,7 +3,6 @@ import data from "./data/ghibli/ghibli.js";
 const filmsdata = data["films"];
 console.log(filmsdata);
 const filmshtml = document.getElementById("peliculasData");
-//console.log();
 let htmls = "";
 
 function peliculasDefault() {
@@ -188,7 +187,6 @@ botonFiltrar.addEventListener("click", (e) => {
 let botonOrdenar = document.getElementById("ordenar");
 botonOrdenar.addEventListener("click", () => {
   let orderBy = document.getElementById("selectOrden").value;
-  //console.log(orderBy);
   let result = orderData(filmsdata, orderBy);
   peliculasPorSeleccion(result);
 });
