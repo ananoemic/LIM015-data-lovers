@@ -26,7 +26,6 @@ btnFilms.addEventListener("click", () => {
   aboutContainer.style.display = "none";
   slider.style.display = "none";
 });
-
 import data from "./data/ghibli/ghibli.js";
 /*
 //para crear una section con js
