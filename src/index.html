@@ -269,4 +269,88 @@
 </body>
 
 <script type="module" src="./main.js"></script>
+    <link rel="Ghibli icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+​
+</head>
+​
+<body>
+​
+  <header id="header" class="header">
+    <span><img id="logoHome" class="logo" src="img/logo.png" alt="logo studio Ghibli"></span>
+    <a href="./films.html" id="btnFilms" class="btnHeader">Films</a>
+      <span id="btnAboutUs" class="btnHeader">About Us</span>
+  </header>
+​
+  <!--Fin de cambios de emily-->
+  <main id="main" class="conteiner">
+​
+      <article id="slider" class="slider">
+        <img id="imgSlider1" src="img/principal.jpg">
+        <img id="imgSlider2" style=display:none src="img/principal2.jpg">
+        <img id="imgSlider3" style=display:none src="img/principal3.jpg">
+      </article>
+    
+      <article id="filmsContainer" class="filmsContainer">
+​
+        <section id=generalSearch  class="filters">
+          <input id="search" type="text" placeholder="   search..."> <img  class="search"  src="img/loupe.png" alt="search">
+        </section>
+​
+        <section id="filter" class="filters">
+            <label for="selectFilter">Filter:</label>
+            <select name="selectFilter" id="selectFilter" class="select">
+                <option value="1">Directors</option>
+                <option value="2">Producers</option>
+            </select>
+        </section>
+​
+        <section id="sort" class="filters">
+            <label for="selectSort">Sort by:</label>
+            <select name="selectSort" id="selectSort" class="select">
+              <option value="1">A-Z</option>
+              <option value="2">Z-A</option>
+              <option value="3">Year (+)</option>
+              <option value="3">Year (-)</option>
+              <option value="3">Score (+)</option>
+              <option value="3">Score (-)</option>
+            </select>
+        </section>
+      </article>
+​
+​
+      <article id="aboutUsContainer">
+        <section id="information" class="aboutUsClass">
+          <h1>About Us</h1>
+          <p> En este sitio web podrás encontrar todo lo relacionado con Studio Ghibli. 
+            Studio Ghibli es un estudio de animación japonés, conocido por sus largometrajes
+            animados como Mi vecino Totoro, El viaje de Chihiro o
+            El castillo ambulante, entre otros grandes éxitos.
+            
+            Las animaciones tienen gran acogida a nivel mundial y algunas han recibido
+            varias nominaciones y premios. De todo este fandom hay un grupo que desea poder
+            interactuar y ver la información de las animaciones y sus personajes.
+          </p>
+        </section>
+      </article>
+​
+  </main>  
+</body>
+​
+<footer>
+  <p class="footer">follow Us</p>
+  <div id="logosFooter" class="logosFooter">
+     
+    <a title="ghibli facebook" href="https://es-la.facebook.com/StuGhibliLat/" target="_blank"><img class="iconFooter" src="img/facebook.png" alt="logo facebook"></a>
+    <a title="ghibli facebook" href="https://www.instagram.com/ghibli.movies/?hl=es" target="_blank"><img class="iconFooter" src="img/instagram.png" alt="logo instagram"></a>
+    <a title="ghibli facebook" href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><img class="iconFooter" src="img/gmail.png" alt="logo gmail"> </a> 
+  </div>
+​
+  <div>
+    <p class="footer">Grupo administrado por Keyla, Emily y Noemi</p>
+  </div>
+</footer>
+​
+  <script type="module" src="./index.js">
+  </script>
 </html>
