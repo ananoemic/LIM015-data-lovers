@@ -251,6 +251,9 @@ filtroBoton.addEventListener('click', showFilter);
 function showFilter () {
     filtro.style.display = 'block';
 }
+
+
+
 import data from "./data/ghibli/ghibli.js";
 
 const filmsdata = data["films"];
