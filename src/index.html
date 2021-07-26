@@ -164,36 +164,41 @@
               <h2>Filtra aquí</h2>
             </div>
 
-            <div class="contenedor-filtro">
-              <label for="filter-select">Buscar:</label>
-              <select name="filter1" id="filter-select">
-                <option value="">Título</option>
-                <option value="">Director</option>
-                <option value="">Productor</option>
+            <div class="filtroPeliculas">
+              <label for="selectFiltro">Buscar:</label>
+              <select name="selectFiltro" id="selectFiltro">
+                <option value="Opción">Elige el director...</option>
+                <option value="Hayao Miyasaki">Hayao Miyasaki</option>
+                <option value="Isao Takahata">Isao Takahata</option>
+                <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+                <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+                <option value="Gorō Miyasaki">Gorō Miyasaki</option>
+                <option value="Hiroyuki Morita">Hiroyuki Morita</option>
               </select>
+
+              <button id="Filtrar">Filtrar</button>
               
-              <label for="filter-sort">Ordenar por:</label>              
-              <select name="filter2" id="filter-sort">
-                <option value=""> A - Z </option>
-                <option value=""> Z - A </option>
-                <option value="">Popularidad </option>
-                <option value="">Por orden de lanzamiento</option>
-              </select>
-
-              <div class="contenido" id="contenido_menu">
-                <!-- el filtrado aquí -->
-                <div class="filtrado">
-                  <div class="item">
-                  </div>
-
-                </div>
-                
-
-              </div>
-
-
             </div>
 
+            <div class="orden"> 
+              <label for="selectOrden">Ordenar por:</label>              
+              <select name="selectOrden" id="selectOrden">
+                <option value="0">Elige una opción...</option>
+                <option value="1"> A-Z</option>
+                <option value="2"> Z-A </option>
+                <option value="3">Year (+)</option>
+                <option value="4"> Year (-) </option>
+                <option value="5">Score (+)</option>
+                <option value="6">Score (-)</option>
+              </select>
+              <button id="ordenar">Ordenar</button>
+            </div>
+              
+
+              <div class="contenido" id="contenido_menu">
+                <section id="peliculasData" class="films">
+                </section>
+              </div> 
 
         </div>
 
