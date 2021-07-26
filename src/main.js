@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-// import data from './data/ghibli/ghibli.js';
+import data from './data/ghibli/ghibli.js';
 
 
 /*slider*/
@@ -252,9 +252,6 @@ function showFilter () {
     filtro.style.display = 'block';
 }
 
-
-
-import data from "./data/ghibli/ghibli.js";
 
 const filmsdata = data["films"];
 const filmshtml = document.getElementById("peliculasData");
