@@ -1,23 +1,7 @@
-import { example, anotherExample } from '../src/data.js';
+import {filterData} from '../src/data';
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+describe("filtrar data por directores",() =>{
+  it("filterData es una función", ()=>{
+    expect(typeof filterData).toBe("function");
   });
 });

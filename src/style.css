@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Merienda&family=Saira:wght@300&display=swap');
 
-
 *{
     margin:0;
     padding: 0;
@@ -152,13 +151,13 @@ header a:hover{
 }
 
 .portada .col .foto.izq{
-    background-image: url('/src/img/hayao.jpg');
+    background-image: url('img/hayao.jpg');
     background-position: left;
     
 }
 
 .portada .col .foto.der{
-    background-image: url('/src/img/castillo.jpg');
+    background-image: url('img/castillo.jpg');
 }
 
 .portada .col .texto{
@@ -185,10 +184,10 @@ header a:hover{
 }
 
 .portada .col .foto-full.izq{
-    background-image: url('/src/img/portada.png')
+    background-image: url('img/portada.png')
 }
 .portada .col .foto-full.der{
-    background-image: url('/src/img/totoro.jpg')
+    background-image: url('img/totoro.jpg')
 }
 
 /*nosotros*/
@@ -274,22 +273,22 @@ header a:hover{
     background-position: center;
 }
 .archivo .container .col .slider .slide.foto1{
-    background-image: url(/src/slider/1.png);
+    background-image: url(slider/1.png);
 }
 .archivo .container .col .slider .slide.foto2{
-    background-image: url(/src/slider/2.jpg);
+    background-image: url(slider/2.jpg);
 }
 .archivo .container .col .slider .slide.foto3{
-    background-image: url(/src/slider/3.jpg);
+    background-image: url(slider/3.jpg);
 }
 .archivo .container .col .slider .slide.foto4{
-    background-image: url(/src/slider/4.jpg);
+    background-image: url(slider/4.jpg);
 }
 .archivo .container .col .slider .slide.foto5{
-    background-image: url(/src/slider/5.jpg);
+    background-image: url(slider/5.jpg);
 }
 .archivo .container .col .slider .slide.foto6{
-    background-image: url(/src/slider/6.jpg);
+    background-image: url(slider/6.jpg);
 }
 
 
